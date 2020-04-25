@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SPACEBALLS_SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['SPACEBALLS_DEBUG']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['spaceballs-search-engine.herokuapp.com']
 
 
 # Application definition
