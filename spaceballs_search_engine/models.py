@@ -1,6 +1,6 @@
 from django.db import models
 
-class Quote(model.Models):
+class Quote(models.Model):
     character = models.CharField(max_length=64)
     line = models.CharField(max_length=1024)
 
