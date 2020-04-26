@@ -4,13 +4,33 @@ body {
     flex-direction: column;
 }
 
+input, select{
+    height: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+input[type=text] {
+    width: 500px;
+}
+select {
+    border-left: 1px solid gray;
+    padding-left: 10px;
+    vertical-align: top;
+}
+
 li:nth-child(odd) {
     background-color: #eee;
 }
 
+h1 {
+    display: inline-block;
+}
+
 h1 a {
     font-family: 'FederationHull';
-    font-size: 24pt;
+    font-size: 22pt;
 }
 
 a, a:hover {
@@ -23,9 +43,9 @@ a, a:hover {
 }
 
 .form {
+    display: inline-block;
     margin-top: 20px;
     margin-left: 40px;
-    text-align: center;
 }
 
 .quotes {
@@ -38,6 +58,7 @@ a, a:hover {
 }
 
 .footer {
+    text-align: center;
     padding-top: 10px;
     padding-bottom: 5px;
     font-size: 12px;
@@ -51,7 +72,6 @@ a, a:hover {
 /* Stars in header and footer */
 .header, .footer {
     background-color: #000028;
-    text-align: center;
     color: white;
     background-image:  
         radial-gradient(circle, rgba(255,255,255,0.7) 20%, transparent 30%),

@@ -13,9 +13,6 @@
 <body>
     <div class='header'>
         <h1><a href='/'>Spaceballs: The Search Engine</a></h1>
-    </div>
-
-    <div class='content'>
         <div class='form'>
             <form action='/' method='POST'>
                 {% csrf_token %}
@@ -23,6 +20,9 @@
                 <input type="submit" value="Search"/>
             </form>
         </div>
+    </div>
+
+    <div class='content'>
 
         <div class='quotes'>
         {% if quotes %}
