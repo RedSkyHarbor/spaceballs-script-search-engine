@@ -5,4 +5,4 @@ class Quote(models.Model):
     line = models.CharField(max_length=1024)
 
     def __str__(self):
-        return 'CHARACTER: {}/nLINE: {}'.format(self.character, self.line)
+        return 'CHARACTER: {}\nLINE: {}'.format(self.character, self.line)
