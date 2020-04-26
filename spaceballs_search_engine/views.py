@@ -5,5 +5,6 @@ from django.http import HttpResponse
 from .models import Quote
 
 def homepage(request):
-    test_quote = Quote.objects.get(pk=1)
-    return HttpResponse(test_quote)
+    all_quotes = Quote.objects.all()
+    context = {'all_quotes': all_quotes}
+    return render(request, 'spaceballs_search_engine/homepage.html', context)
