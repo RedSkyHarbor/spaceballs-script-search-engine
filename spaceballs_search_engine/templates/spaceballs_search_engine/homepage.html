@@ -9,18 +9,30 @@
 </head>
 
 <body>
-    <h1><a href='/'>Spaceballs Search Engine</a></h1>
+    <div class='header'>
+        <h1><a href='/'>Spaceballs Search Engine</a></h1>
+    </div>
     
-    <ul>
-    {% for quote in all_quotes %}
-        <li>{{ quote }}</li>
-    {% endfor %}
-    </ul>
+    <div class='form'>
+        <form action='/' method='POST'>
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Search"/>
+        </form>
+    </div>
 
-    {% if not all_quotes %}
-        <p>Empty!</p>
+    <div class='quotes'>
+    {% if quotes %}
+        <p>Found {{ quotes|length }} quotes</p>
+        <ul>
+        {% for quote in quotes %}
+            <li>{{ quote }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No quotes found</p>
     {% endif %}
-
+    </div>
 </body>
 
 </html>
