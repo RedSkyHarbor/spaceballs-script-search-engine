@@ -5,11 +5,12 @@ from .models import Quote
 
 def homepage(request):
     form = SearchForm(request.POST)
-    context = {'form': form}
+    context = {'form': form, 'first_visit': True}
 
     # If form was submitted
     if request.method == 'POST':
         if form.is_valid():
+            context['first_visit'] = False
             character = form.cleaned_data['character']
             line = form.cleaned_data['line']
 
