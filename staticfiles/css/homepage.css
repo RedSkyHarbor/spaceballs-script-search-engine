@@ -1,14 +1,19 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 p {
     margin-left: 20px;
 }
 
 h1 a {
-    color: white;
     font-family: 'FederationHull';
     font-size: 24pt;
 }
 
-a:hover {
+a, a:hover {
     color: white;
 }
 
@@ -39,4 +44,20 @@ a:hover {
 
 li:nth-child(odd) {
     background-color: #eee;
+}
+
+.footer {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background: #4B79A1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #283E51, #0A2342);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #283E51, #0A2342); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -olinear-gradient(to top, #283E51, #0A2342);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+.content {
+    flex: 1;
 }
