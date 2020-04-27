@@ -23,21 +23,26 @@
     </div>
 
     <div class='content'>
-
-        <div class='quotes'>
         {% if quotes %}
+        <div class='quotes'>
             <p>Found {{ quotes|length }} quotes</p>
             <ul>
             {% for quote in quotes %}
                 <li>{{ quote }}</li>
             {% endfor %}
             </ul>
+        </div> 
         {% else %}
-            {% if not first_visit %}
-                <p>No quotes found</p>
+        <div class='noquotes'>
+            {% if first_visit %}
+                <p>Select a character, and enter the quote as you remember it</p>
+                <p>And may the schwartz be with you!</p>
+            {% else %}
+                <p>No quotes found :(</p>
             {% endif %}
-        {% endif %}
         </div>
+        {% endif %}
+        
     </div>
 
 
